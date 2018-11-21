@@ -1,0 +1,141 @@
+<br>
+<div class="row">
+    <div class="col-6">
+        <div id="success" class="alert alert-success {{#if noMessages}}invisible{{/if}}" >
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+{{# each products }}
+    <div class="card-deck">
+        {{# each this }}
+        <div class="card">
+            <img class="card-img-top" src="{{ this.imagePath }}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">{{ this.title }}</h4>
+                <p class="card-text">{{ this.description }}</p>
+            </div>
+            <div class="card-footer">
+                <div class="price">${{ this.price }}
+                    <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+{{/each}}
+
+<!--
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="https://i.pinimg.com/736x/4f/c4/80/4fc480df0701ef0f3d54a6c752925a8d--anime-wolf-drawing-wolf-drawings.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <div class="price">$12
+                <a href="#" class="btn btn-success pull-right" role="button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://i.pinimg.com/originals/4d/99/67/4d9967f19aab52f672c08a0f4a4f3b37.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://community.playstation.com/attachments/257743iB05F44573191B99F.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="https://i.pinimg.com/736x/4f/c4/80/4fc480df0701ef0f3d54a6c752925a8d--anime-wolf-drawing-wolf-drawings.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <div class="price">$12
+                <a href="#" class="btn btn-success pull-right" role="button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://i.pinimg.com/originals/4d/99/67/4d9967f19aab52f672c08a0f4a4f3b37.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://community.playstation.com/attachments/257743iB05F44573191B99F.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+-->
+
+
+<!--
+<div class="col-sm-6 col-md-4">
+    <div class="card ">
+        <img class="card-img-top" src="https://i.pinimg.com/736x/4f/c4/80/4fc480df0701ef0f3d54a6c752925a8d--anime-wolf-drawing-wolf-drawings.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <div class="price">$12
+                <a href="#" class="btn btn-success pull-right" role="button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-6 col-md-4">
+    <div class="card">
+        <img class="card-img-top" src="https://i.pinimg.com/originals/4d/99/67/4d9967f19aab52f672c08a0f4a4f3b37.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-6 col-md-4">
+    <div class="card">
+        <img class="card-img-top" src="https://community.playstation.com/attachments/257743iB05F44573191B99F.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-success" role="button">Add to Cart</a>
+        </div>
+    </div>
+</div>
+-->
